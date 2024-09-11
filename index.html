@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official Peaky Blinders Store - Exclusive Merchandise from the Hit Series">
+    <meta name="keywords" content="Peaky Blinders, Store, Merchandise, Apparel, Collectibles">
+    <title>Peaky Blinders Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        html {
+    scroll-behavior: smooth;
+}
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #1a1a1a;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 2;
+        }
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        .navbar a:hover,
+        .navbar a.active {
+            color:white;
+        }
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+            text-align: center;
+            background: url('images/b 1.jpeg') no-repeat center center/cover;
+            position: relative;
+        }
+        .cta-button {
+    border: 2px solid #ffffff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+.cta-button:hover {
+    border: 2px solid #f0a500;
+    background-color: #f0f0f0;
+}
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .header {
+    background-attachment: fixed;
+}
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        .header-title {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .header-subtitle {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+        }
+        .cta-button {
+            padding: 15px 30px;
+            font-size: 1em;
+            color: #1a1a1a;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #f0f0f0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .main {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .product {
+            background-color: #333333;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product:hover {
+    transform: rotateY(5deg) scale(1.05);
+}
+
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product-title {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .product-price {
+            font-size: 1em;
+            color: #cccccc;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            color: #ffffff;
+            margin: 0 10px;
+            font-size: 1.5em;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #f0a500;
+        }
+        .about {
+            margin: 40px 0;
+            padding: 40px;
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .about h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #f0a500;
+        }
+        .about p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #cccccc;
+            max-width: 80%;
+        }
+        .about img {
+            max-width: 125%;
+            border-radius: 220%;
+            border: 3px solid #f0a500;
+            transition: transform 0.3s ease;
+        }
+        .about img:hover {
+            transform: scale(1.05);
+        }
+        .login-section {
+            background-color: #2a2a2a;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            margin: 40px auto;
+            text-align: center;
+        }
+        .login-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #f0a500;
+        }
+        .login-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .login-section label {
+            display: block;
+            margin-bottom: 5px;
+            color: #cccccc;
+        }
+        .login-section input {
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+        }
+        .login-section input[type="text"],
+        .login-section input[type="password"] {
+            background-color: #333333;
+            color: #ffffff;
+        }
+        .login-section input[type="submit"] {
+            background-color: #f0a500;
+            color: #1a1a1a;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        .login-section input[type="submit"]:hover {
+            background-color: #e08e00;
+        }
+        .login-section .signup-button {
+            margin-top: 15px;
+            background-color: #1a1a1a;
+            color: #f0a500;
+            border: 2px solid #f0a500;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .login-section .signup-button:hover {
+            background-color: #f0a500;
+            color: #1a1a1a;
+        }
+        @media (max-width: 768px) {
+            .header {
+                height: 50vh;
+            }
+            .header-title {
+                font-size: 2em;
+            }
+            .header-subtitle {
+                font-size: 1.2em;
+            }
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+            .about {
+                flex-direction: column;
+                align-items: center;
+            }
+            .about p {
+                max-width: 150%;
+                text-align: center;
+                margin-bottom: 50px;
+            }
+            .about img {
+                max-width: 1000%;
+            }
+            .login-section {
+                width: 90%;
+            }
+        }
+        .testimonials {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #333333;
+            color: #ffffff;
+        }
+        .testimonial {
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        .newsletter {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #2a2a2a;
+        }
+        .newsletter h2 {
+            margin-bottom: 20px;
+            color: #f0a500;
+        }
+        .newsletter input[type="email"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            width: 70%;
+            max-width: 300px;
+        }
+        .newsletter input[type="submit"] {
+            padding: 10px;
+            background-color: #f0a500;
+            border: none;
+            border-radius: 5px;
+            color: #1a1a1a;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .newsletter input[type="submit"]:hover {
+            background-color: #e08e00;
+        }
+        .footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 0.8em;
+        }
+        .footer a {
+            color: #f0a500;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="header">
+        <div class="overlay"></div>
+        <div class="header-content">
+            <div class="header-title">Peaky Blinders Store</div>
+            <div class="header-subtitle">Exclusive Merchandise from the Hit Series</div>
+            <button class="cta-button">Shop Now</button>
+        </div>
+    </div>
+    <div class="main">
+        <div class="products">
+            <div class="product">
+                <img src="images/p 7.jpeg" alt="Max Suit">
+                <div class="product-title">Max Suit</div>
+                <div class="product-price">$25.00</div>
+            </div>
+            <div class="product">
+                <img src="images/p 2.jpg" alt="Spax Suit">
+                <div class="product-title">Spax Suit</div>
+                <div class="product-price">$15.00</div>
+            </div>
+            <div class="product">
+                <img src="images/p 3.jpeg" alt="Step Suit">
+                <div class="product-title">Step Suit</div>
+                <div class="product-price">$10.00</div>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="about">
+        <div>
+            <h2>About Us</h2>
+            <p>Welcome to the Peaky Blinders Store, your one-stop shop for exclusive merchandise from the hit series. From stylish apparel to unique collectibles, we offer a wide range of products that capture the essence of the show. Join us in celebrating the legacy of the Shelby family and immerse yourself in the world of Peaky Blinders.</p>
+        </div>
+        <img src="images/h 1.jpeg" alt="Peaky Blinders Store">
+    </div>
+    <section class="login-section">
+        <h2>Login</h2>
+        <form onsubmit="handleLogin(event)">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+            <button type="button" class="signup-button" onclick="showSignup()">Sign Up</button>
+        </form>
+    </section>
+    <div class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial">
+            <p>"Great products and amazing service!"</p>
+            <cite>- CHEGUVER</cite>
+        </div>
+        <!-- Add more testimonials as needed -->
+    </div>
+    
+    <section class="newsletter">
+        <h2>Subscribe to Our Newsletter</h2>
+        <form>
+            <input type="email" placeholder="Enter your email">
+            <input type="submit" value="Subscribe">
+        </form>
+    </section>
+    <div class="footer">
+        <p>&copy; 2024 Peaky Blinders Store. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            alert('Login submitted!');
+        }
+
+        function showSignup() {
+            alert('Sign Up button clicked!');
+        }
+    </script>
+	
+	
+    
+    
+</body>
+</html>
